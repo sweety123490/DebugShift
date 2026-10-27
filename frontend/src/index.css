@@ -1,0 +1,239 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================================================
+   THEME DESIGN TOKENS
+   ========================================================================== */
+:root {
+  color-scheme: dark;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+html.light {
+  color-scheme: light;
+}
+
+@layer base {
+  body {
+    background-color: #070a11;
+    color: #f8fafc;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+}
+
+/* ==========================================================================
+   DARK MODE DEFAULT UTILITIES
+   ========================================================================== */
+.glass-panel {
+  background: rgba(11, 15, 25, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(23, 32, 51, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.glow-effect {
+  position: relative;
+}
+
+.glow-effect::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #6366f1, #a855f7, #06b6d4);
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.glow-effect:hover::after {
+  opacity: 0.35;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0f19;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* ==========================================================================
+   LIGHT MODE: HIGH-CONTRAST, 100% READABLE & POLISHED
+   ========================================================================== */
+html.light {
+  background-color: #f8fafc !important;
+}
+
+html.light body,
+html.light #root,
+html.light .bg-dark-900,
+html.light [class*="bg-dark-900"],
+html.light .min-h-screen.bg-dark-900 {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+/* Light Mode Surfaces & Cards */
+html.light .bg-dark-850,
+html.light [class*="bg-dark-850"] {
+  background-color: #ffffff !important;
+}
+
+html.light .bg-dark-800,
+html.light [class*="bg-dark-800"] {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+}
+
+html.light .bg-dark-750,
+html.light [class*="bg-dark-750"] {
+  background-color: #f1f5f9 !important;
+}
+
+html.light .glass-panel {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(12px) !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05) !important;
+}
+
+html.light .glass-card {
+  background: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.06) !important;
+}
+
+/* Light Mode Borders */
+html.light .border-dark-700,
+html.light [class*="border-dark-700"] {
+  border-color: #e2e8f0 !important;
+}
+
+html.light .border-dark-800,
+html.light [class*="border-dark-800"] {
+  border-color: #f1f5f9 !important;
+}
+
+html.light .border-dark-600,
+html.light [class*="border-dark-600"] {
+  border-color: #cbd5e1 !important;
+}
+
+/* High Contrast Typography */
+html.light h1,
+html.light h2,
+html.light h3,
+html.light h4,
+html.light h5,
+html.light h6 {
+  color: #0f172a !important;
+}
+
+html.light .text-slate-100,
+html.light .text-slate-200 {
+  color: #0f172a !important;
+}
+
+html.light .text-slate-300,
+html.light .text-slate-400 {
+  color: #334155 !important;
+}
+
+html.light .text-slate-500 {
+  color: #64748b !important;
+}
+
+/* Gradients text clipping must keep color: transparent */
+html.light .bg-clip-text {
+  color: transparent !important;
+}
+
+/* Buttons: Primary & Gradient action buttons keep clean white text */
+html.light button.text-white,
+html.light a.text-white,
+html.light [class*="bg-gradient-to"].text-white,
+html.light [class*="bg-brand-primary"].text-white,
+html.light [class*="bg-brand-secondary"].text-white,
+html.light [class*="bg-emerald-"].text-white,
+html.light [class*="bg-rose-"].text-white {
+  color: #ffffff !important;
+}
+
+/* Secondary / Outline Buttons in Light Mode */
+html.light a.bg-dark-800,
+html.light button.bg-dark-800 {
+  background-color: #ffffff !important;
+  color: #334155 !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+html.light a.bg-dark-800:hover,
+html.light button.bg-dark-800:hover {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+}
+
+/* Inputs, Textareas, Selects */
+html.light input:not([type="checkbox"]):not([type="radio"]),
+html.light textarea,
+html.light select {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid #cbd5e1 !important;
+}
+
+html.light input::placeholder,
+html.light textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Scrollbars in Light Mode */
+html.light ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+html.light ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+}
+html.light ::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Hero background glow reduction in light mode (only background decorative divs) */
+html.light .pointer-events-none[class*="blur-"] {
+  opacity: 0.15 !important;
+}
+
+/* Dashboard & Challenge Workspace Light Mode Polish */
+html.light .dashboard-search-input {
+  background: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+}
+
+html.light footer {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+}
