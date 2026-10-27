@@ -73,13 +73,13 @@ Traditional coding interview platforms focus heavily on abstract algorithmic puz
 ## 4. System Architecture
 
 ```mermaid
-graph TD
-    Client["Frontend (React + Vite + Tailwind)"] -->|HTTP / JSON| API["Backend API (Express.js)"]
-    API --> Auth["JWT & bcrypt Authentication"]
-    API --> DB[("MongoDB (Mongoose / Memory Fallback)")]
+flowchart TD
+    Client["Frontend - React, Vite, Tailwind"] -->|HTTP / REST API| API["Backend API - Express.js"]
+    API --> Auth["JWT and bcrypt Authentication"]
+    API --> DB[("MongoDB Database")]
     API --> Evaluator["Evaluator Service"]
-    Evaluator -->|AI Prompt & Rubric| Gemini["Google Gemini 1.5 API"]
-    Evaluator -.->|Fallback if Key Absent| MockEngine["Mock Verification Engine"]
+    Evaluator -->|Prompt and Rubric| Gemini["Google Gemini 1.5 API"]
+    Evaluator -->|Fallback Engine| MockEngine["Mock Verification Engine"]
 ```
 
 ---
