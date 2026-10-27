@@ -7,6 +7,17 @@
 ![Google Gemini](https://img.shields.io/badge/AI-Google%20Gemini%201.5-8B5CF6?style=for-the-badge)
 ![TailwindCSS](https://img.shields.io/badge/Styling-Tailwind%20CSS-06B6D4?style=for-the-badge)
 
+
+---
+
+## 🎬 Project Demo Video
+
+> Click the link below to watch the full demo of DebugShift in action:
+
+### 👉 [▶ Watch Demo Video on Google Drive](https://drive.google.com/file/d/1SsBqFZLvr7CVOmAnDrurjNejlbYQ06fC/view?usp=sharing)
+
+[![Watch Demo](https://img.shields.io/badge/Demo%20Video-Google%20Drive-red?style=for-the-badge&logo=google-drive)](https://drive.google.com/file/d/1SsBqFZLvr7CVOmAnDrurjNejlbYQ06fC/view?usp=sharing)
+
 ---
 
 ## 1. Project Overview & Problem Statement
